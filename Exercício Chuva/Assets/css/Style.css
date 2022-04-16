@@ -1,0 +1,1019 @@
+*{
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*
+    MENU DE NAVEGAÇÃO MOBILE
+*/
+.navigation-mobile{
+    display: none;
+    justify-content: center;
+    background-color: #ED7839;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 1030;
+}
+#btnNav{
+    border: none;
+    background-color: rgba(0, 0, 0, 0.0);
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+}
+.navigation-mobile img{
+    width: 20px;
+    height: 20px;
+    top: 20px;
+}
+
+/*
+    MENU DE NAVEGAÇÃO 
+
+    MENU LATERAL
+*/
+.navigation{
+    background-color: #FFF;
+    z-index: 1;
+    width: 220px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    display: inline-flex;
+    flex-direction: column;
+    box-shadow: 1px 0 8px #ccc;
+    text-align: center;
+}
+.navigation-title{
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 600;
+    color: #FFF;
+    background: linear-gradient(#FFB354, #EE7A3A);
+    background-color: #feb053;
+    padding: 15px;
+}
+.navigation-logo {
+    width: 220px;
+    text-align: center;
+    align-self: center;
+    margin-top: 20px;
+}
+.menu ul,
+.menu a{
+    text-decoration: none;
+    list-style: none;
+    text-transform: uppercase;
+    color: #725C5C;
+    text-align: left;
+    padding: 0;
+    margin: 0;
+}
+.menu ul{
+    margin-top: 25px;
+}
+.menu li{
+    font-size: 15px;
+    padding: 10px;
+    padding-left: 20px;
+    border-bottom: 1px solid #ccc;
+}
+.menu li.active,
+.menu li:hover{
+    background-color: rgba(254, 176, 83, 0.2);
+    border-left: 6px solid #feb053;
+}
+
+/*
+    CONTAINER DEFAULT USADO NA INTERFACE
+*/
+.container{
+    display: flex;
+    align-items: center;
+    width: 1190px;
+    box-sizing: border-box;
+}
+.container.header{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    width: 1190px;
+}
+/*
+    PADRÃO PARA DEIXAR O CONTAINER EM DIRECTION COLUMN CASO PRECISE
+*/
+.column{
+    flex-direction: column;
+}
+
+/*
+    CABEÇALHO
+*/
+header{  
+    margin: auto;
+    margin-left: 220px;
+    display: flex;
+    background-color: rgba(254, 176, 83, 0.2);
+    height: 70px;
+    justify-content: center;
+    padding: 10px 15px;
+}
+/*
+    TITULO DO CABEÇALHO
+*/
+.header-title{
+    color: #725C5C;
+    flex: 1;
+}
+.header-title h2,
+.header-title h3{
+    margin: 0;
+    margin-bottom: 5px;
+}
+.header-title h1{
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 26px;
+    margin: 0;
+}
+.header-title h2{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+}
+.header-title h3{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+}
+/*
+    BOTÃO DE IDIOMAS
+*/
+.language-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 35px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 0px 5px;
+}
+.language-button a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    text-decoration: none;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+.language-button p{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    margin: 0;
+    padding: 0;
+}
+.language-button img{
+    width: 17px;
+    height: 17px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.language-button img:last-child{
+    width: 15px;
+    height: 15px;
+}
+/*
+    INFORMAÇÕES DO USUÁRIO
+*/
+.user{
+    display: flex;
+    align-items: center;
+    text-align: end;
+    margin-left: 30px;
+}
+.user-info{
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+}
+.user-info h1{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 400;
+    color: #333;
+    margin-bottom: 2px;
+}
+.user-info h2{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: 400;
+    color: #333;
+    margin-top: 2px;
+}
+.user-photo{
+    margin-left: 15px;
+    margin-right: 30px;
+    border-radius: 20px;
+}
+.user-photo img{
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+}
+.user-photo::after{
+    content: '2';
+    width: 13px;
+    height: 13px;
+    font-size: 11px;
+    color: #FFF;
+    background-color: #F85959;
+    text-align: center;
+    border-radius: 7px;
+    position: absolute;
+    margin-left: -10px;
+}
+
+
+/*
+    Vídeo
+*/
+main{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-left: 230px;
+    margin-right: 20px;
+}
+.videos h1{
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 25px;
+    color: #ED7839;
+    margin-right: 30px;
+}
+/*
+    Aqui, fiz uma configuração para que sempre que o mouse do usuário passe por cima da area do video, as legendas irão aparecer.
+    Não atrapalha a visualização do vídeo em tela cheia.
+*/
+.video {
+    margin: auto;
+    width: 950px;
+    height: 500px;
+}
+.video .videoarea{
+    width: 853px; 
+    height: 480px;
+    margin: 20px 10px;
+}
+.video video{
+    width: inherit;
+    height: inherit;
+    border-radius: 6px;
+}
+.video .video-info{
+    display: none;
+    position: absolute;
+    background-color: rgba(237, 120, 57, 0.2);
+    width: inherit;
+    height: inherit;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: start;
+    padding: 35px;
+    box-sizing: border-box;
+    border-radius: 6px;
+}
+.video .video-info figure{
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+.video .video-info h2{
+    font-size: 24px;
+    color: #FFF;
+    margin: 0;
+    padding: 0;
+}
+.video .video-info h1{
+    font-size: 34px;
+    color: #FFF;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+.video .video-info figure img{
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+    padding: 3px;
+    border: 1px solid #ED7839;
+    margin-right: 30px;
+    margin-bottom: 35px;
+}
+.video .videoarea:hover .video-info{
+    display: flex;
+}
+
+/*
+    Aside Video
+*/
+.video-aside{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%;
+}
+/*
+    Botões
+*/
+.video-aside .download-video{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 15px;
+}
+.button{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #FFF;
+    font-size: 24px;
+    background-color: #ED7839;
+    width: 43px;
+    height: 30px;
+    border-radius: 4px;
+    margin: 5px;
+}
+.button:first-child{
+    width: 120px;
+}
+.button:last-child{
+    margin-right: 0;
+}
+.button img{
+    width: 16px;
+    height: 16px;
+}
+.button h1{
+    font-size: 16px;
+    font-weight: normal;
+    margin-left: 10px;
+}
+
+/*
+    CITAÇÃO
+*/
+
+.citacao{
+    display: flex;
+    flex-direction: column;  
+}
+.citacao-title{
+    font-weight: bold;
+    font-size: 16px;
+    color: #ED7839;
+    text-transform: uppercase;
+    text-align: end;
+    margin-bottom: 5px;
+    padding: 10px;
+    padding-right: 0;
+}
+.citacao .default-details{
+    width: 240px;
+}
+.citacao .default-details--body p,
+.citacao .default-details--body b{
+    font-family: 'Quicksand', sans-serif;
+    color: #5C5C5C;
+    line-height: 20px;
+}
+
+/*
+    DEFAULT PARA AS SECTION/ARTICLE
+*/
+.default-details{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    border: 1px solid #ECECEC;
+    border-radius: 3px;
+}
+.default-details--title{
+    flex: 1;
+    font-weight: bold;
+    font-size: 20px;
+    color: #4E4E4E;
+    background-color: #FDF1EB;
+    padding: 15px;
+    border-bottom: 1px solid #ECECEC;
+}
+.default-details--body{
+    background-color: #FFF;
+    font-size: 14px;
+    padding: 15px;
+    padding-top: 0;
+}
+.default-details--body p,
+.default-details--body span{
+    font-family: 'Quicksand', sans-serif;
+}
+
+/*
+    RESUMO
+*/
+.resume{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    margin: 30px 230px;
+    margin-right: 20px;
+}
+.resume .default-details--body p{
+    line-height: 23px;
+    cursor: pointer;
+}
+.resume .default-details--body a{
+    margin-left: 5px;
+    color: #ED7839;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+}
+.resume .default-details--body a:hover{
+    text-decoration: underline;
+}
+.resume #more{
+    display: none;
+}
+
+/*
+    DISCUSSÕES
+*/
+.discussion{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-left: 230px;
+    margin-right: 20px;
+}
+.discussion .default-details{
+    width: 100%;
+}
+.discussion .default-details--body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.discussion-create{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+/*
+    TELAS DAS INTERAÇÕES
+*/
+
+/*
+    TELA DA INTERAÇÃO 1, CRIAR O COMENTÁRIO
+*/
+#createComment{
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+}
+#createComment .container{
+    width: 800px;
+}
+#createComment h1{
+    font-size: 18px;
+    color: #ED7839;
+}
+#btnCreateComment{
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    color: #FFF;
+    background: linear-gradient(#FEB254, #F0813D);
+    padding: 5px 25px;
+    border: none;
+    border-radius: 4px;
+    margin-top: 20px;
+    margin-bottom: -13px;
+    cursor: pointer;
+    text-decoration: none;
+}
+#btnCreateComment .button-retangle{
+    width: 3px;
+    height: 15px;
+    background-color: #FFF;
+    margin-right: 10px;
+    border-radius: 2px;
+}
+.button-retangle::after{
+    content: '';
+    width: 15px;
+    height: 3px;
+    margin-top: 6px;
+    margin-left: -6px;
+    border-radius: 2px;
+    background-color: #FFF;
+    position: absolute;
+    display: block;
+}
+
+/*
+    TELA DA INTERAÇÃO 2, FORMULÁRIO DO COMENTÁRIO
+*/
+#commentForm{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid #E7E7E7;
+    margin-bottom: 10px;
+}
+#commentForm form{
+    text-align: start;
+    align-self: flex-start;
+    width: 100%;
+    margin-bottom: 0;
+}
+#commentForm label{
+    font-size: 16px;
+    font-weight: bold;
+    color: #ED7839;
+    margin-top: 15px;
+}
+#commentTitle{
+    width: 100%;
+    height: 39px;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-top: 5px;
+    border: 1px solid #CCC;
+    border-radius: 3px;
+}
+#commentTitle::placeholder{
+    font-family: 'Quicksand';
+}
+#commentBody{
+    width: 100%;
+    height: 80px;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-top: 5px;
+    resize: none;
+    border: 1px solid #CCC;
+    border-radius: 3px;
+    border-end-end-radius: 0;
+    border-end-start-radius: 0;
+    margin-bottom: 0;
+}
+.comment-submit{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 31px;
+    width: 100%;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    border-top: none;
+    margin-top: -4px;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+#btnBold{
+    font-size: 17px;
+    border: none;
+    margin: 0 10px;
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+}
+#btnBold b{
+    font-family: Arial, Helvetica, sans-serif;
+}
+#btnBold:hover{
+    background-color: #ccc;
+}
+#btnItalic{
+    font-size: 17px;
+    font-weight: bold;
+    border: none;
+    margin: 0 10px;
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+}
+#btnItalic:hover{
+    background-color: #ccc;
+}
+#btnItalic i{
+    font-family: 'Times New Roman', Times, serif;
+}
+#commentSubmit{
+    width: 200px;
+    height: 100%;
+    border-end-end-radius: 3px;
+    border: none;
+    background: linear-gradient(#FEB154, #F1833E);
+    font-size: 15px;
+    color: #fff;
+    font-weight: bold;
+    font-family: 'Quicksand';
+    cursor: pointer;
+}
+
+/*
+    TELA DA INTERAÇÃO 3, COMENTÁRIO ENVIADO
+*/
+#commentSent{
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    border-bottom: 1px solid #E7E7E7;
+    margin-bottom: 25px;
+}
+#commentSent h1{
+    font-size: 18px;
+    color: #ED7839;
+    margin-bottom: 5px;
+}
+#commentSent a{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 14px;
+    color: #ED7839;
+    text-decoration: underline;
+    margin-bottom: 30px;
+}
+#btnNewTopic{
+    width: 230px;
+    height: 32px;
+    background: linear-gradient(#FEB254, #F0813D);
+    color: #fff;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+    border: none;
+    border-radius: 3px;
+    margin-top: 15px;
+    cursor: pointer;
+    margin-bottom: -15px;
+}
+
+/*
+    TELA DA COMENTÁRIOS ENVIADOS
+*/
+.discussion-comments{
+    display: flex;
+    flex-direction: column;
+    padding: 15px 10px;
+}
+#newComment{
+    padding: 0;
+    display: none;
+}
+.comment-blur{
+    height: 100%;
+    padding: 15px 20px;
+    filter: blur(4px);
+}
+#new-comment-info{
+    position: absolute;
+    z-index: 1;
+    background-color: rgba(221, 221, 221, 0.6);
+    width: 1137px;
+    height: 170px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+#new-comment-info h1{
+    font-size: 16px;
+    color: #707070;
+}
+#new-comment-info a{
+    font-size: 14px;
+    color: #ED7839;
+    text-decoration: underline;
+    font-family: 'Quicksand', sans-serif;
+    cursor: pointer;
+}
+#new-comment-info img{
+    filter: none;
+}
+.comment-default{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #E7E7E7;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+    padding: 15px 20px;
+    margin: 15px 0px;
+}
+.comment-default h1{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 16px;
+    color: #ED7839;
+    margin-bottom: 3px;
+    margin-top: 5px;
+}
+.comment-default h3{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 12px;
+    color: #5C5C5C;
+    margin: 0;
+}
+.comment-buttons{
+    display: flex;
+    align-items: center;
+}
+.comment-buttons .points{
+    display: flex;
+    flex-direction: column;
+}
+.comment-buttons .point{
+    width: 4px;
+    height: 4px;
+    border-radius: 2px;
+    margin-bottom: 3px;
+    background-color: #ED7839;
+}
+.comment-buttons .point:last-child{
+    margin: 0;
+}
+.comment-buttons .button{
+    width: 30px;
+    height: 20px;
+    margin-left: 15px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.24);
+}
+.comment-buttons .button img{
+    width: 14px;
+    height: 14px;
+}
+.comment-buttons p{
+    margin: 0px 10px;
+}
+.comment-buttons p:last-child{
+    margin-left: 0;
+}
+
+
+
+/*
+    RODAPÉ
+*/
+footer{
+    margin-left: 230px;
+    display: flex;
+    height: 181px;
+    background-color: #fff;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+footer .container{
+    flex-wrap: nowrap;
+}
+.logo-footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.logo-footer a{
+    width: 220px;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background-color: #71478e;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+.footer-text{
+    margin-left: 20px;
+}
+.footer-text p,
+.footer-text b{
+    font-size: 15px;
+    font-family: 'Quicksand', sans-serif;
+    color: #4E4E4E;
+}
+
+@media only screen and (min-width: 426px) and (max-width: 1024px){
+    .container{
+        flex-wrap: wrap;
+    }
+
+    .header-title h2{
+        display: none;
+    }
+    .header-title h1{
+        font-size: 16px;
+    }
+    .header-title h3{
+        font-size: 10px;
+    }
+    .user-photo{
+        margin-right: 0;
+    }
+
+    .video{
+        width: 650px;
+        height: 350px;
+    }
+    .video .videoarea{
+        width: 600px;
+        height: auto;
+    }
+    .video .videoarea:hover .video-info{
+        display: none;
+    }
+
+    .video-aside{
+        width: 100%;
+    }
+    .citacao{
+        width: 100%;
+    }
+    .citacao .default-details{
+        width: 100%;
+    }
+    .citacao-title{
+        text-align: start;
+    }
+
+    
+    .discussion{
+        margin-right: 0;
+    }
+    #createComment .container{
+        width: 100%;
+    }
+    #new-comment-info{
+        width: 720px;
+    }
+    .discussion .default-details{
+        width: 772px;
+    }
+}
+@media (max-width: 425px) {
+    .navigation{
+        display: none;
+        right: 0;
+        width: auto;
+        bottom: auto;
+        margin-top: 25px;
+    }
+    .navigation-title{
+        display: none;
+    }
+    .navigation-mobile{
+        display: flex;
+    }
+    .menu ul, .menu a{
+        text-align: center;
+    }
+    .container{
+        flex-wrap: wrap;
+    }
+
+    header{
+        margin-left: 0;
+        width: 400px;
+        height: auto;
+        padding-top: 45px;
+    }
+    .container.header{
+        justify-content: center;
+    }
+    .header-title{
+        flex: auto;
+    }
+    .header-title h2{
+        display: none;
+    }
+    .header-title h1{
+        font-size: 16px;
+        font-weight: bold;
+        text-align: center;
+    }
+    .header-title h3{
+        display: none;
+    }
+    .user{
+        margin-left: 10px;
+        margin-right: 20px;
+        width: 100%;
+        justify-content: flex-end;
+    }
+    .user-photo{
+        margin-right: 0;
+    }
+    .language-button{
+        display: none;
+    }
+
+    main{
+        margin-left: 9px;
+        width: 100%;
+    }
+    .videos{
+        width: 380px;
+        margin: auto;
+    }
+    .videos h1{
+        font-size: 15px;
+        max-width: 350px;
+        margin: auto;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    .video{
+        width: 100%;
+        height: auto;
+    }
+    .video .videoarea{
+        width: 350px;
+        margin: auto;
+        height: auto;
+    }
+    .video .videoarea:hover .video-info{
+        display: none;
+    }
+
+    .video-aside{
+        width: 380px;
+        margin: auto;
+    }
+    .video-aside .download-video{
+        margin: 0px auto;
+        margin-top: 15px;
+    }
+    .citacao{
+        width: 100%;
+    }
+    .citacao .default-details{
+        width: 100%;
+    }
+    .citacao-title{
+        text-align: start;
+    }
+
+    .resume{
+        margin: auto;
+        margin-right: 14px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        width: 380px;
+    }
+    
+    .discussion{
+        width: 380px;
+        margin: auto;
+        margin-right: 14px;
+    }
+    .discussion .default-details{
+        width: 380px;
+        margin: auto;
+    }
+    .discussion-create{
+        width: 350px;
+    }
+    #createComment .container{
+        width: 100%;
+    }
+    #new-comment-info{
+        width: 328px;
+        height: 221px;
+    }
+    footer{
+        width: 380px;
+        margin: auto;
+        height: auto;
+    }
+    footer .container{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
